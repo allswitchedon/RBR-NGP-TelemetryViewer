@@ -13,7 +13,7 @@ namespace RBR_NGP_TelemetryViewer
             var startposition = driveLineLocation[Array.LastIndexOf(raceTime, 0)];
             var index = Array.LastIndexOf(driveLineLocation, startposition);
             var reactiontime = raceTime[index];
-            string r = "";
+            string r;
             if (reactiontime ==0)
             {
                 r = "You're Alien";

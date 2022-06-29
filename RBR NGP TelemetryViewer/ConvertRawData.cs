@@ -8,11 +8,11 @@ namespace RBR_NGP_TelemetryViewer
 {
     internal class ConvertRawData
     {
-        public static double[] Suspension (List<double> data)
+        public static double[] Damper (List<double> data)
         {
             for (int i = 0; i < data.Count; i++)
             {
-                data[i] = -data[i];
+                data[i] = -data[i]*100;
             }
             return data.ToArray();
         }
@@ -74,6 +74,17 @@ namespace RBR_NGP_TelemetryViewer
             for (int i = 0; i < data.Count; i++)
             {
                 data[i] = data[i] / 9.806652048217348;
+            }
+            return data.ToArray();
+        }
+
+        public static double[] Suspension(List<double> data)
+        {
+            var min = data.Min();
+            var max = data.Max();
+            for (int i = 0; i < data.Count; i++)
+            {
+                data[i] = data[i] * 100;
             }
             return data.ToArray();
         }
