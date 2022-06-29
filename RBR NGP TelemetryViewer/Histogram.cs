@@ -28,9 +28,11 @@ namespace RBR_NGP_TelemetryViewer
             // display the histogram counts as a bar plot
             //var bar = TireTempFLPlotH.Plot.AddBar(values: counts, positions: leftEdges);
 
-            var bar = new List<double[]>();
-            bar.Add(counts);
-            bar.Add(leftEdges);
+            var bar = new List<double[]>
+            {
+                counts,
+                leftEdges
+            };
             return bar;
         }
         public static List<double[]> TyresPressure(double[] values, double binsize)
@@ -51,9 +53,11 @@ namespace RBR_NGP_TelemetryViewer
             // display the histogram counts as a bar plot
             //var bar = TireTempFLPlotH.Plot.AddBar(values: counts, positions: leftEdges);
 
-            var bar = new List<double[]>();
-            bar.Add(counts);
-            bar.Add(leftEdges);
+            var bar = new List<double[]>
+            {
+                counts,
+                leftEdges
+            };
             return bar;
         }
         public static List<double[]> Suspension(double[] value, double[] raceTime, double binsize)
@@ -84,9 +88,11 @@ namespace RBR_NGP_TelemetryViewer
             // display the histogram counts as a bar plot
             //var bar = TireTempFLPlotH.Plot.AddBar(values: counts, positions: leftEdges);
 
-            var bar = new List<double[]>();
-            bar.Add(counts);
-            bar.Add(leftEdges);
+            var bar = new List<double[]>
+            {
+                counts,
+                leftEdges
+            };
             return bar;
         }
 

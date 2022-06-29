@@ -30,596 +30,93 @@ namespace RBR_NGP_TelemetryViewer
         [System.Obsolete]
         private void InitializeComponent()
         {
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.TimeDiffirenceChart = new ScottPlot.FormsPlot();
-            this.RaceTrack = new ScottPlot.FormsPlot();
-            this.EngineDataChart = new ScottPlot.FormsPlot();
-            this.GForcesChart = new ScottPlot.FormsPlot();
-            this.SpeedChart = new ScottPlot.FormsPlot();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.TyreTempRBPlotH = new ScottPlot.FormsPlot();
-            this.TyreTempLBPlotH = new ScottPlot.FormsPlot();
-            this.TyreTempRFPlotH = new ScottPlot.FormsPlot();
-            this.TyreTempLFPlotH = new ScottPlot.FormsPlot();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.TyrePressureRBPlotH = new ScottPlot.FormsPlot();
-            this.TyrePressureLBPlotH = new ScottPlot.FormsPlot();
-            this.TyrePressureRFPlotH = new ScottPlot.FormsPlot();
-            this.TyrePressureLFPlotH = new ScottPlot.FormsPlot();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.SuspensionRBPlotH = new ScottPlot.FormsPlot();
-            this.SuspensionLBPlotH = new ScottPlot.FormsPlot();
-            this.SuspensionRFPlotH = new ScottPlot.FormsPlot();
-            this.SuspensionLFPlotH = new ScottPlot.FormsPlot();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.SuspensionRBPlot = new ScottPlot.FormsPlot();
-            this.SuspensionLBPlot = new ScottPlot.FormsPlot();
-            this.SuspensionRFPlot = new ScottPlot.FormsPlot();
-            this.SuspensionLFPlot = new ScottPlot.FormsPlot();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.BrakeTempRBPlot = new ScottPlot.FormsPlot();
-            this.BrakeTempLBPlot = new ScottPlot.FormsPlot();
-            this.BrakeTempRFPlot = new ScottPlot.FormsPlot();
-            this.BrakeTempLFPlot = new ScottPlot.FormsPlot();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.TyrePressureRBPlot = new ScottPlot.FormsPlot();
-            this.TyrePressureLBPlot = new ScottPlot.FormsPlot();
-            this.TyrePressureRFPlot = new ScottPlot.FormsPlot();
-            this.TyrePressureLFPlot = new ScottPlot.FormsPlot();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.TyreTempsRBPlot = new ScottPlot.FormsPlot();
-            this.TyreTempsLBPlot = new ScottPlot.FormsPlot();
-            this.TyreTempsRFPlot = new ScottPlot.FormsPlot();
-            this.TyreTempsLFPlot = new ScottPlot.FormsPlot();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.HelperSpringPlot = new ScottPlot.FormsPlot();
-            this.EngineTempsPlot = new ScottPlot.FormsPlot();
-            this.WheelSpeedPlot = new ScottPlot.FormsPlot();
-            this.GearPlot = new ScottPlot.FormsPlot();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.WheelWearsRBPlot = new ScottPlot.FormsPlot();
-            this.WheelWearsLBPlot = new ScottPlot.FormsPlot();
-            this.WheelWearsRFPlot = new ScottPlot.FormsPlot();
-            this.WheelWearsLFPlot = new ScottPlot.FormsPlot();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.firstMenuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.wTFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.loadToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addWorkspaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Show_WheelSpeed_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.tyrePressureToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.histogramToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tyreTempToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lineToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.histogramToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.suspensionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Suspension_Lines_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Suspension_Histogram_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.dampersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Dampers_Lines_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.Dampers_Histogram_Menu = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Front_Bump_Treshold = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.Rear_Bump_Treshold = new System.Windows.Forms.ToolStripTextBox();
+            this.addWorkspaceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.SuspensionForcesRBPlot = new ScottPlot.FormsPlot();
-            this.SuspensionForcesLBPlot = new ScottPlot.FormsPlot();
-            this.SuspensionForcesRFPlot = new ScottPlot.FormsPlot();
-            this.SuspensionForcesLFPlot = new ScottPlot.FormsPlot();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
-            this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.Dampers = new System.Windows.Forms.TabPage();
+            this.DamperRB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.DamperLB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.DamperRF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.DamperLF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.Suspension = new System.Windows.Forms.TabPage();
+            this.SuspensionRB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.SuspensionLB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.SuspensionRF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.SuspensionLF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyreTemp = new System.Windows.Forms.TabPage();
+            this.TyreTempsRB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyreTempsLB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyreTempsRF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyreTempsLF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyrePressure = new System.Windows.Forms.TabPage();
+            this.TyrePressureRB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyrePressureLB_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyrePressureRF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.TyrePressureLF_OP = new OxyPlot.WindowsForms.PlotView();
+            this.Main = new System.Windows.Forms.TabPage();
+            this.Engine_Plot = new OxyPlot.WindowsForms.PlotView();
+            this.GForces_Plot = new OxyPlot.WindowsForms.PlotView();
+            this.Speed_Plot = new OxyPlot.WindowsForms.PlotView();
+            this.TimeDiff_Plot = new OxyPlot.WindowsForms.PlotView();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.TrackLeght_OP = new OxyPlot.WindowsForms.PlotView();
+            this.RaceTrack_OP = new OxyPlot.WindowsForms.PlotView();
+            this.label1 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
-            this.tabPage11.SuspendLayout();
+            this.Dampers.SuspendLayout();
+            this.Suspension.SuspendLayout();
+            this.TyreTemp.SuspendLayout();
+            this.TyrePressure.SuspendLayout();
+            this.Main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Controls.Add(this.tabPage4);
-            this.tabControl1.Controls.Add(this.tabPage5);
-            this.tabControl1.Controls.Add(this.tabPage6);
-            this.tabControl1.Controls.Add(this.tabPage7);
-            this.tabControl1.Controls.Add(this.tabPage8);
-            this.tabControl1.Controls.Add(this.tabPage9);
-            this.tabControl1.Controls.Add(this.tabPage10);
-            this.tabControl1.Controls.Add(this.tabPage11);
-            this.tabControl1.Location = new System.Drawing.Point(0, 26);
-            this.tabControl1.MaximumSize = new System.Drawing.Size(1536, 864);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1232, 626);
-            this.tabControl1.TabIndex = 2;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.dataGridView1);
-            this.tabPage1.Controls.Add(this.TimeDiffirenceChart);
-            this.tabPage1.Controls.Add(this.RaceTrack);
-            this.tabPage1.Controls.Add(this.EngineDataChart);
-            this.tabPage1.Controls.Add(this.GForcesChart);
-            this.tabPage1.Controls.Add(this.SpeedChart);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(939, 6);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(280, 278);
-            this.dataGridView1.TabIndex = 5;
-            // 
-            // TimeDiffirenceChart
-            // 
-            this.TimeDiffirenceChart.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TimeDiffirenceChart.Location = new System.Drawing.Point(0, 0);
-            this.TimeDiffirenceChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TimeDiffirenceChart.Name = "TimeDiffirenceChart";
-            this.TimeDiffirenceChart.Size = new System.Drawing.Size(950, 98);
-            this.TimeDiffirenceChart.TabIndex = 4;
-            // 
-            // RaceTrack
-            // 
-            this.RaceTrack.Location = new System.Drawing.Point(939, 347);
-            this.RaceTrack.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.RaceTrack.Name = "RaceTrack";
-            this.RaceTrack.Size = new System.Drawing.Size(266, 246);
-            this.RaceTrack.TabIndex = 3;
-            // 
-            // EngineDataChart
-            // 
-            this.EngineDataChart.Location = new System.Drawing.Point(0, 412);
-            this.EngineDataChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.EngineDataChart.Name = "EngineDataChart";
-            this.EngineDataChart.Size = new System.Drawing.Size(950, 185);
-            this.EngineDataChart.TabIndex = 2;
-            // 
-            // GForcesChart
-            // 
-            this.GForcesChart.Location = new System.Drawing.Point(0, 246);
-            this.GForcesChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GForcesChart.Name = "GForcesChart";
-            this.GForcesChart.Size = new System.Drawing.Size(950, 162);
-            this.GForcesChart.TabIndex = 1;
-            // 
-            // SpeedChart
-            // 
-            this.SpeedChart.Location = new System.Drawing.Point(0, 102);
-            this.SpeedChart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SpeedChart.Name = "SpeedChart";
-            this.SpeedChart.Size = new System.Drawing.Size(950, 139);
-            this.SpeedChart.TabIndex = 0;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.TyreTempRBPlotH);
-            this.tabPage2.Controls.Add(this.TyreTempLBPlotH);
-            this.tabPage2.Controls.Add(this.TyreTempRFPlotH);
-            this.tabPage2.Controls.Add(this.TyreTempLFPlotH);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            this.tabPage2.Click += new System.EventHandler(this.tabPage2_Click);
-            // 
-            // TyreTempRBPlotH
-            // 
-            this.TyreTempRBPlotH.Location = new System.Drawing.Point(612, 299);
-            this.TyreTempRBPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempRBPlotH.Name = "TyreTempRBPlotH";
-            this.TyreTempRBPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyreTempRBPlotH.TabIndex = 3;
-            // 
-            // TyreTempLBPlotH
-            // 
-            this.TyreTempLBPlotH.Location = new System.Drawing.Point(0, 299);
-            this.TyreTempLBPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempLBPlotH.Name = "TyreTempLBPlotH";
-            this.TyreTempLBPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyreTempLBPlotH.TabIndex = 2;
-            // 
-            // TyreTempRFPlotH
-            // 
-            this.TyreTempRFPlotH.Location = new System.Drawing.Point(612, 0);
-            this.TyreTempRFPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempRFPlotH.Name = "TyreTempRFPlotH";
-            this.TyreTempRFPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyreTempRFPlotH.TabIndex = 1;
-            // 
-            // TyreTempLFPlotH
-            // 
-            this.TyreTempLFPlotH.Location = new System.Drawing.Point(0, 0);
-            this.TyreTempLFPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempLFPlotH.Name = "TyreTempLFPlotH";
-            this.TyreTempLFPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyreTempLFPlotH.TabIndex = 0;
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.Controls.Add(this.TyrePressureRBPlotH);
-            this.tabPage3.Controls.Add(this.TyrePressureLBPlotH);
-            this.tabPage3.Controls.Add(this.TyrePressureRFPlotH);
-            this.tabPage3.Controls.Add(this.TyrePressureLFPlotH);
-            this.tabPage3.Location = new System.Drawing.Point(4, 25);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
-            // 
-            // TyrePressureRBPlotH
-            // 
-            this.TyrePressureRBPlotH.Location = new System.Drawing.Point(612, 299);
-            this.TyrePressureRBPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureRBPlotH.Name = "TyrePressureRBPlotH";
-            this.TyrePressureRBPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyrePressureRBPlotH.TabIndex = 7;
-            // 
-            // TyrePressureLBPlotH
-            // 
-            this.TyrePressureLBPlotH.Location = new System.Drawing.Point(0, 299);
-            this.TyrePressureLBPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureLBPlotH.Name = "TyrePressureLBPlotH";
-            this.TyrePressureLBPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyrePressureLBPlotH.TabIndex = 6;
-            // 
-            // TyrePressureRFPlotH
-            // 
-            this.TyrePressureRFPlotH.Location = new System.Drawing.Point(612, 0);
-            this.TyrePressureRFPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureRFPlotH.Name = "TyrePressureRFPlotH";
-            this.TyrePressureRFPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyrePressureRFPlotH.TabIndex = 5;
-            // 
-            // TyrePressureLFPlotH
-            // 
-            this.TyrePressureLFPlotH.Location = new System.Drawing.Point(0, 0);
-            this.TyrePressureLFPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureLFPlotH.Name = "TyrePressureLFPlotH";
-            this.TyrePressureLFPlotH.Size = new System.Drawing.Size(612, 298);
-            this.TyrePressureLFPlotH.TabIndex = 4;
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.SuspensionRBPlotH);
-            this.tabPage4.Controls.Add(this.SuspensionLBPlotH);
-            this.tabPage4.Controls.Add(this.SuspensionRFPlotH);
-            this.tabPage4.Controls.Add(this.SuspensionLFPlotH);
-            this.tabPage4.Location = new System.Drawing.Point(4, 25);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "tabPage4";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
-            // SuspensionRBPlotH
-            // 
-            this.SuspensionRBPlotH.Location = new System.Drawing.Point(612, 299);
-            this.SuspensionRBPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionRBPlotH.Name = "SuspensionRBPlotH";
-            this.SuspensionRBPlotH.Size = new System.Drawing.Size(612, 298);
-            this.SuspensionRBPlotH.TabIndex = 11;
-            // 
-            // SuspensionLBPlotH
-            // 
-            this.SuspensionLBPlotH.Location = new System.Drawing.Point(0, 299);
-            this.SuspensionLBPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionLBPlotH.Name = "SuspensionLBPlotH";
-            this.SuspensionLBPlotH.Size = new System.Drawing.Size(612, 298);
-            this.SuspensionLBPlotH.TabIndex = 10;
-            // 
-            // SuspensionRFPlotH
-            // 
-            this.SuspensionRFPlotH.Location = new System.Drawing.Point(612, 0);
-            this.SuspensionRFPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionRFPlotH.Name = "SuspensionRFPlotH";
-            this.SuspensionRFPlotH.Size = new System.Drawing.Size(612, 298);
-            this.SuspensionRFPlotH.TabIndex = 9;
-            // 
-            // SuspensionLFPlotH
-            // 
-            this.SuspensionLFPlotH.Location = new System.Drawing.Point(0, 0);
-            this.SuspensionLFPlotH.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionLFPlotH.Name = "SuspensionLFPlotH";
-            this.SuspensionLFPlotH.Size = new System.Drawing.Size(612, 298);
-            this.SuspensionLFPlotH.TabIndex = 8;
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Controls.Add(this.SuspensionRBPlot);
-            this.tabPage5.Controls.Add(this.SuspensionLBPlot);
-            this.tabPage5.Controls.Add(this.SuspensionRFPlot);
-            this.tabPage5.Controls.Add(this.SuspensionLFPlot);
-            this.tabPage5.Location = new System.Drawing.Point(4, 25);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage5.TabIndex = 4;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // SuspensionRBPlot
-            // 
-            this.SuspensionRBPlot.Location = new System.Drawing.Point(0, 447);
-            this.SuspensionRBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionRBPlot.Name = "SuspensionRBPlot";
-            this.SuspensionRBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionRBPlot.TabIndex = 7;
-            // 
-            // SuspensionLBPlot
-            // 
-            this.SuspensionLBPlot.Location = new System.Drawing.Point(0, 298);
-            this.SuspensionLBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionLBPlot.Name = "SuspensionLBPlot";
-            this.SuspensionLBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionLBPlot.TabIndex = 6;
-            // 
-            // SuspensionRFPlot
-            // 
-            this.SuspensionRFPlot.Location = new System.Drawing.Point(0, 149);
-            this.SuspensionRFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionRFPlot.Name = "SuspensionRFPlot";
-            this.SuspensionRFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionRFPlot.TabIndex = 5;
-            // 
-            // SuspensionLFPlot
-            // 
-            this.SuspensionLFPlot.Location = new System.Drawing.Point(0, 0);
-            this.SuspensionLFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionLFPlot.Name = "SuspensionLFPlot";
-            this.SuspensionLFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionLFPlot.TabIndex = 4;
-            // 
-            // tabPage6
-            // 
-            this.tabPage6.Controls.Add(this.BrakeTempRBPlot);
-            this.tabPage6.Controls.Add(this.BrakeTempLBPlot);
-            this.tabPage6.Controls.Add(this.BrakeTempRFPlot);
-            this.tabPage6.Controls.Add(this.BrakeTempLFPlot);
-            this.tabPage6.Location = new System.Drawing.Point(4, 25);
-            this.tabPage6.Name = "tabPage6";
-            this.tabPage6.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "tabPage6";
-            this.tabPage6.UseVisualStyleBackColor = true;
-            // 
-            // BrakeTempRBPlot
-            // 
-            this.BrakeTempRBPlot.Location = new System.Drawing.Point(0, 447);
-            this.BrakeTempRBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BrakeTempRBPlot.Name = "BrakeTempRBPlot";
-            this.BrakeTempRBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.BrakeTempRBPlot.TabIndex = 7;
-            // 
-            // BrakeTempLBPlot
-            // 
-            this.BrakeTempLBPlot.Location = new System.Drawing.Point(0, 298);
-            this.BrakeTempLBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BrakeTempLBPlot.Name = "BrakeTempLBPlot";
-            this.BrakeTempLBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.BrakeTempLBPlot.TabIndex = 6;
-            // 
-            // BrakeTempRFPlot
-            // 
-            this.BrakeTempRFPlot.Location = new System.Drawing.Point(0, 149);
-            this.BrakeTempRFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BrakeTempRFPlot.Name = "BrakeTempRFPlot";
-            this.BrakeTempRFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.BrakeTempRFPlot.TabIndex = 5;
-            // 
-            // BrakeTempLFPlot
-            // 
-            this.BrakeTempLFPlot.Location = new System.Drawing.Point(0, 0);
-            this.BrakeTempLFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.BrakeTempLFPlot.Name = "BrakeTempLFPlot";
-            this.BrakeTempLFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.BrakeTempLFPlot.TabIndex = 4;
-            // 
-            // tabPage7
-            // 
-            this.tabPage7.Controls.Add(this.TyrePressureRBPlot);
-            this.tabPage7.Controls.Add(this.TyrePressureLBPlot);
-            this.tabPage7.Controls.Add(this.TyrePressureRFPlot);
-            this.tabPage7.Controls.Add(this.TyrePressureLFPlot);
-            this.tabPage7.Location = new System.Drawing.Point(4, 25);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage7.TabIndex = 6;
-            this.tabPage7.Text = "tabPage7";
-            this.tabPage7.UseVisualStyleBackColor = true;
-            // 
-            // TyrePressureRBPlot
-            // 
-            this.TyrePressureRBPlot.Location = new System.Drawing.Point(0, 447);
-            this.TyrePressureRBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureRBPlot.Name = "TyrePressureRBPlot";
-            this.TyrePressureRBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyrePressureRBPlot.TabIndex = 7;
-            // 
-            // TyrePressureLBPlot
-            // 
-            this.TyrePressureLBPlot.Location = new System.Drawing.Point(0, 298);
-            this.TyrePressureLBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureLBPlot.Name = "TyrePressureLBPlot";
-            this.TyrePressureLBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyrePressureLBPlot.TabIndex = 6;
-            // 
-            // TyrePressureRFPlot
-            // 
-            this.TyrePressureRFPlot.Location = new System.Drawing.Point(0, 149);
-            this.TyrePressureRFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureRFPlot.Name = "TyrePressureRFPlot";
-            this.TyrePressureRFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyrePressureRFPlot.TabIndex = 5;
-            // 
-            // TyrePressureLFPlot
-            // 
-            this.TyrePressureLFPlot.Location = new System.Drawing.Point(0, 0);
-            this.TyrePressureLFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyrePressureLFPlot.Name = "TyrePressureLFPlot";
-            this.TyrePressureLFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyrePressureLFPlot.TabIndex = 4;
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.Controls.Add(this.TyreTempsRBPlot);
-            this.tabPage8.Controls.Add(this.TyreTempsLBPlot);
-            this.tabPage8.Controls.Add(this.TyreTempsRFPlot);
-            this.tabPage8.Controls.Add(this.TyreTempsLFPlot);
-            this.tabPage8.Location = new System.Drawing.Point(4, 25);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage8.TabIndex = 7;
-            this.tabPage8.Text = "tabPage8";
-            this.tabPage8.UseVisualStyleBackColor = true;
-            // 
-            // TyreTempsRBPlot
-            // 
-            this.TyreTempsRBPlot.Location = new System.Drawing.Point(0, 447);
-            this.TyreTempsRBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempsRBPlot.Name = "TyreTempsRBPlot";
-            this.TyreTempsRBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyreTempsRBPlot.TabIndex = 7;
-            // 
-            // TyreTempsLBPlot
-            // 
-            this.TyreTempsLBPlot.Location = new System.Drawing.Point(0, 298);
-            this.TyreTempsLBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempsLBPlot.Name = "TyreTempsLBPlot";
-            this.TyreTempsLBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyreTempsLBPlot.TabIndex = 6;
-            // 
-            // TyreTempsRFPlot
-            // 
-            this.TyreTempsRFPlot.Location = new System.Drawing.Point(0, 149);
-            this.TyreTempsRFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempsRFPlot.Name = "TyreTempsRFPlot";
-            this.TyreTempsRFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyreTempsRFPlot.TabIndex = 5;
-            // 
-            // TyreTempsLFPlot
-            // 
-            this.TyreTempsLFPlot.Location = new System.Drawing.Point(0, 0);
-            this.TyreTempsLFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.TyreTempsLFPlot.Name = "TyreTempsLFPlot";
-            this.TyreTempsLFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.TyreTempsLFPlot.TabIndex = 4;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Controls.Add(this.HelperSpringPlot);
-            this.tabPage9.Controls.Add(this.EngineTempsPlot);
-            this.tabPage9.Controls.Add(this.WheelSpeedPlot);
-            this.tabPage9.Controls.Add(this.GearPlot);
-            this.tabPage9.Location = new System.Drawing.Point(4, 25);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage9.TabIndex = 8;
-            this.tabPage9.Text = "tabPage9";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // HelperSpringPlot
-            // 
-            this.HelperSpringPlot.Location = new System.Drawing.Point(0, 447);
-            this.HelperSpringPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.HelperSpringPlot.Name = "HelperSpringPlot";
-            this.HelperSpringPlot.Size = new System.Drawing.Size(1224, 149);
-            this.HelperSpringPlot.TabIndex = 7;
-            // 
-            // EngineTempsPlot
-            // 
-            this.EngineTempsPlot.Location = new System.Drawing.Point(0, 298);
-            this.EngineTempsPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.EngineTempsPlot.Name = "EngineTempsPlot";
-            this.EngineTempsPlot.Size = new System.Drawing.Size(1224, 149);
-            this.EngineTempsPlot.TabIndex = 6;
-            // 
-            // WheelSpeedPlot
-            // 
-            this.WheelSpeedPlot.Location = new System.Drawing.Point(0, 149);
-            this.WheelSpeedPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.WheelSpeedPlot.Name = "WheelSpeedPlot";
-            this.WheelSpeedPlot.Size = new System.Drawing.Size(1224, 149);
-            this.WheelSpeedPlot.TabIndex = 5;
-            // 
-            // GearPlot
-            // 
-            this.GearPlot.Location = new System.Drawing.Point(0, 0);
-            this.GearPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.GearPlot.Name = "GearPlot";
-            this.GearPlot.Size = new System.Drawing.Size(1224, 149);
-            this.GearPlot.TabIndex = 4;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Controls.Add(this.WheelWearsRBPlot);
-            this.tabPage10.Controls.Add(this.WheelWearsLBPlot);
-            this.tabPage10.Controls.Add(this.WheelWearsRFPlot);
-            this.tabPage10.Controls.Add(this.WheelWearsLFPlot);
-            this.tabPage10.Location = new System.Drawing.Point(4, 25);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1224, 597);
-            this.tabPage10.TabIndex = 9;
-            this.tabPage10.Text = "tabPage10";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // WheelWearsRBPlot
-            // 
-            this.WheelWearsRBPlot.Location = new System.Drawing.Point(0, 447);
-            this.WheelWearsRBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.WheelWearsRBPlot.Name = "WheelWearsRBPlot";
-            this.WheelWearsRBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.WheelWearsRBPlot.TabIndex = 7;
-            // 
-            // WheelWearsLBPlot
-            // 
-            this.WheelWearsLBPlot.Location = new System.Drawing.Point(0, 298);
-            this.WheelWearsLBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.WheelWearsLBPlot.Name = "WheelWearsLBPlot";
-            this.WheelWearsLBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.WheelWearsLBPlot.TabIndex = 6;
-            // 
-            // WheelWearsRFPlot
-            // 
-            this.WheelWearsRFPlot.Location = new System.Drawing.Point(0, 149);
-            this.WheelWearsRFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.WheelWearsRFPlot.Name = "WheelWearsRFPlot";
-            this.WheelWearsRFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.WheelWearsRFPlot.TabIndex = 5;
-            // 
-            // WheelWearsLFPlot
-            // 
-            this.WheelWearsLFPlot.Location = new System.Drawing.Point(0, 0);
-            this.WheelWearsLFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.WheelWearsLFPlot.Name = "WheelWearsLFPlot";
-            this.WheelWearsLFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.WheelWearsLFPlot.TabIndex = 4;
             // 
             // menuStrip1
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.firstMenuToolStripMenuItem,
-            this.aboutToolStripMenuItem});
+            this.aboutToolStripMenuItem,
+            this.wTFToolStripMenuItem,
+            this.workspaceToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1232, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1519, 28);
             this.menuStrip1.TabIndex = 3;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -660,50 +157,615 @@ namespace RBR_NGP_TelemetryViewer
             this.aboutToolStripMenuItem1.Size = new System.Drawing.Size(133, 26);
             this.aboutToolStripMenuItem1.Text = "About";
             // 
+            // wTFToolStripMenuItem
+            // 
+            this.wTFToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.saveToolStripMenuItem,
+            this.loadToolStripMenuItem});
+            this.wTFToolStripMenuItem.Name = "wTFToolStripMenuItem";
+            this.wTFToolStripMenuItem.Size = new System.Drawing.Size(91, 24);
+            this.wTFToolStripMenuItem.Text = "StageMap";
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // loadToolStripMenuItem
+            // 
+            this.loadToolStripMenuItem.Name = "loadToolStripMenuItem";
+            this.loadToolStripMenuItem.Size = new System.Drawing.Size(125, 26);
+            this.loadToolStripMenuItem.Text = "Load";
+            // 
+            // workspaceToolStripMenuItem
+            // 
+            this.workspaceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addWorkspaceToolStripMenuItem,
+            this.tyrePressureToolStripMenuItem,
+            this.tyreTempToolStripMenuItem,
+            this.suspensionToolStripMenuItem,
+            this.dampersToolStripMenuItem,
+            this.addWorkspaceToolStripMenuItem1});
+            this.workspaceToolStripMenuItem.Name = "workspaceToolStripMenuItem";
+            this.workspaceToolStripMenuItem.Size = new System.Drawing.Size(95, 24);
+            this.workspaceToolStripMenuItem.Text = "Workspace";
+            // 
+            // addWorkspaceToolStripMenuItem
+            // 
+            this.addWorkspaceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Show_WheelSpeed_Menu});
+            this.addWorkspaceToolStripMenuItem.Name = "addWorkspaceToolStripMenuItem";
+            this.addWorkspaceToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.addWorkspaceToolStripMenuItem.Text = "Main Page";
+            // 
+            // Show_WheelSpeed_Menu
+            // 
+            this.Show_WheelSpeed_Menu.Name = "Show_WheelSpeed_Menu";
+            this.Show_WheelSpeed_Menu.Size = new System.Drawing.Size(220, 26);
+            this.Show_WheelSpeed_Menu.Text = "Show Wheel Speed";
+            this.Show_WheelSpeed_Menu.Click += new System.EventHandler(this.Show_WheelSpeed_Menu_Click);
+            // 
+            // tyrePressureToolStripMenuItem
+            // 
+            this.tyrePressureToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lineToolStripMenuItem,
+            this.histogramToolStripMenuItem});
+            this.tyrePressureToolStripMenuItem.Name = "tyrePressureToolStripMenuItem";
+            this.tyrePressureToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.tyrePressureToolStripMenuItem.Text = "Tyre Pressure";
+            // 
+            // lineToolStripMenuItem
+            // 
+            this.lineToolStripMenuItem.Name = "lineToolStripMenuItem";
+            this.lineToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.lineToolStripMenuItem.Text = "Line";
+            this.lineToolStripMenuItem.Click += new System.EventHandler(this.lineToolStripMenuItem_Click);
+            // 
+            // histogramToolStripMenuItem
+            // 
+            this.histogramToolStripMenuItem.Name = "histogramToolStripMenuItem";
+            this.histogramToolStripMenuItem.Size = new System.Drawing.Size(162, 26);
+            this.histogramToolStripMenuItem.Text = "Histogram";
+            this.histogramToolStripMenuItem.Click += new System.EventHandler(this.histogramToolStripMenuItem_Click);
+            // 
+            // tyreTempToolStripMenuItem
+            // 
+            this.tyreTempToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lineToolStripMenuItem1,
+            this.histogramToolStripMenuItem1});
+            this.tyreTempToolStripMenuItem.Name = "tyreTempToolStripMenuItem";
+            this.tyreTempToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.tyreTempToolStripMenuItem.Text = "Tyre Temperature";
+            // 
+            // lineToolStripMenuItem1
+            // 
+            this.lineToolStripMenuItem1.Name = "lineToolStripMenuItem1";
+            this.lineToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
+            this.lineToolStripMenuItem1.Text = "Line";
+            this.lineToolStripMenuItem1.Click += new System.EventHandler(this.lineToolStripMenuItem1_Click);
+            // 
+            // histogramToolStripMenuItem1
+            // 
+            this.histogramToolStripMenuItem1.Name = "histogramToolStripMenuItem1";
+            this.histogramToolStripMenuItem1.Size = new System.Drawing.Size(162, 26);
+            this.histogramToolStripMenuItem1.Text = "Histogram";
+            this.histogramToolStripMenuItem1.Click += new System.EventHandler(this.histogramToolStripMenuItem1_Click);
+            // 
+            // suspensionToolStripMenuItem
+            // 
+            this.suspensionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Suspension_Lines_Menu,
+            this.Suspension_Histogram_Menu});
+            this.suspensionToolStripMenuItem.Name = "suspensionToolStripMenuItem";
+            this.suspensionToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.suspensionToolStripMenuItem.Text = "Suspension";
+            // 
+            // Suspension_Lines_Menu
+            // 
+            this.Suspension_Lines_Menu.Name = "Suspension_Lines_Menu";
+            this.Suspension_Lines_Menu.Size = new System.Drawing.Size(162, 26);
+            this.Suspension_Lines_Menu.Text = "Lines";
+            this.Suspension_Lines_Menu.Click += new System.EventHandler(this.Suspension_Lines_Menu__Click);
+            // 
+            // Suspension_Histogram_Menu
+            // 
+            this.Suspension_Histogram_Menu.Name = "Suspension_Histogram_Menu";
+            this.Suspension_Histogram_Menu.Size = new System.Drawing.Size(162, 26);
+            this.Suspension_Histogram_Menu.Text = "Histogram";
+            this.Suspension_Histogram_Menu.Click += new System.EventHandler(this.Suspension_Histogram_Menu_Click);
+            // 
+            // dampersToolStripMenuItem
+            // 
+            this.dampersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Dampers_Lines_Menu,
+            this.Dampers_Histogram_Menu});
+            this.dampersToolStripMenuItem.Name = "dampersToolStripMenuItem";
+            this.dampersToolStripMenuItem.Size = new System.Drawing.Size(207, 26);
+            this.dampersToolStripMenuItem.Text = "Dampers";
+            // 
+            // Dampers_Lines_Menu
+            // 
+            this.Dampers_Lines_Menu.Name = "Dampers_Lines_Menu";
+            this.Dampers_Lines_Menu.Size = new System.Drawing.Size(162, 26);
+            this.Dampers_Lines_Menu.Text = "Lines";
+            this.Dampers_Lines_Menu.Click += new System.EventHandler(this.Dampers_Lines_Menu_Click);
+            // 
+            // Dampers_Histogram_Menu
+            // 
+            this.Dampers_Histogram_Menu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.Front_Bump_Treshold,
+            this.toolStripMenuItem2,
+            this.Rear_Bump_Treshold});
+            this.Dampers_Histogram_Menu.Name = "Dampers_Histogram_Menu";
+            this.Dampers_Histogram_Menu.Size = new System.Drawing.Size(162, 26);
+            this.Dampers_Histogram_Menu.Text = "Histogram";
+            this.Dampers_Histogram_Menu.Click += new System.EventHandler(this.Dampers_Histrogram_Menu_Click);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(247, 26);
+            this.toolStripMenuItem1.Text = "Front Threshold (mm/s)";
+            // 
+            // Front_Bump_Treshold
+            // 
+            this.Front_Bump_Treshold.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Front_Bump_Treshold.Name = "Front_Bump_Treshold";
+            this.Front_Bump_Treshold.Size = new System.Drawing.Size(100, 27);
+            this.Front_Bump_Treshold.Text = "30";
+            this.Front_Bump_Treshold.TextChanged += new System.EventHandler(this.Front_Bump_Treshold_TextChanged);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(247, 26);
+            this.toolStripMenuItem2.Text = "Rear Threshold (mm/s)";
+            // 
+            // Rear_Bump_Treshold
+            // 
+            this.Rear_Bump_Treshold.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Rear_Bump_Treshold.Name = "Rear_Bump_Treshold";
+            this.Rear_Bump_Treshold.Size = new System.Drawing.Size(100, 27);
+            this.Rear_Bump_Treshold.Text = "30";
+            this.Rear_Bump_Treshold.TextChanged += new System.EventHandler(this.Rear_Bump_Treshold_TextChanged);
+            // 
+            // addWorkspaceToolStripMenuItem1
+            // 
+            this.addWorkspaceToolStripMenuItem1.Name = "addWorkspaceToolStripMenuItem1";
+            this.addWorkspaceToolStripMenuItem1.Size = new System.Drawing.Size(207, 26);
+            this.addWorkspaceToolStripMenuItem1.Text = "Add Workspace";
+            this.addWorkspaceToolStripMenuItem1.Click += new System.EventHandler(this.addWorkspaceToolStripMenuItem_Click);
+            // 
             // tabPage11
             // 
-            this.tabPage11.Controls.Add(this.SuspensionForcesRBPlot);
-            this.tabPage11.Controls.Add(this.SuspensionForcesLBPlot);
-            this.tabPage11.Controls.Add(this.SuspensionForcesRFPlot);
-            this.tabPage11.Controls.Add(this.SuspensionForcesLFPlot);
             this.tabPage11.Location = new System.Drawing.Point(4, 25);
             this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Size = new System.Drawing.Size(1224, 597);
+            this.tabPage11.Size = new System.Drawing.Size(1200, 597);
             this.tabPage11.TabIndex = 10;
             this.tabPage11.Text = "tabPage11";
             this.tabPage11.UseVisualStyleBackColor = true;
             // 
-            // SuspensionForcesRBPlot
+            // tabPage10
             // 
-            this.SuspensionForcesRBPlot.Location = new System.Drawing.Point(0, 447);
-            this.SuspensionForcesRBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionForcesRBPlot.Name = "SuspensionForcesRBPlot";
-            this.SuspensionForcesRBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionForcesRBPlot.TabIndex = 11;
+            this.tabPage10.Location = new System.Drawing.Point(4, 25);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Size = new System.Drawing.Size(1200, 597);
+            this.tabPage10.TabIndex = 9;
+            this.tabPage10.Text = "tabPage10";
+            this.tabPage10.UseVisualStyleBackColor = true;
             // 
-            // SuspensionForcesLBPlot
+            // tabPage9
             // 
-            this.SuspensionForcesLBPlot.Location = new System.Drawing.Point(0, 298);
-            this.SuspensionForcesLBPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionForcesLBPlot.Name = "SuspensionForcesLBPlot";
-            this.SuspensionForcesLBPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionForcesLBPlot.TabIndex = 10;
+            this.tabPage9.Location = new System.Drawing.Point(4, 25);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Size = new System.Drawing.Size(1200, 597);
+            this.tabPage9.TabIndex = 8;
+            this.tabPage9.Text = "tabPage9";
+            this.tabPage9.UseVisualStyleBackColor = true;
             // 
-            // SuspensionForcesRFPlot
+            // tabPage8
             // 
-            this.SuspensionForcesRFPlot.Location = new System.Drawing.Point(0, 149);
-            this.SuspensionForcesRFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionForcesRFPlot.Name = "SuspensionForcesRFPlot";
-            this.SuspensionForcesRFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionForcesRFPlot.TabIndex = 9;
+            this.tabPage8.Location = new System.Drawing.Point(4, 25);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1200, 597);
+            this.tabPage8.TabIndex = 7;
+            this.tabPage8.Text = "tabPage8";
+            this.tabPage8.UseVisualStyleBackColor = true;
             // 
-            // SuspensionForcesLFPlot
+            // tabPage7
             // 
-            this.SuspensionForcesLFPlot.Location = new System.Drawing.Point(0, 0);
-            this.SuspensionForcesLFPlot.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.SuspensionForcesLFPlot.Name = "SuspensionForcesLFPlot";
-            this.SuspensionForcesLFPlot.Size = new System.Drawing.Size(1224, 149);
-            this.SuspensionForcesLFPlot.TabIndex = 8;
+            this.tabPage7.Location = new System.Drawing.Point(4, 25);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1200, 597);
+            this.tabPage7.TabIndex = 6;
+            this.tabPage7.Text = "tabPage7";
+            this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 25);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Size = new System.Drawing.Size(1200, 597);
+            this.tabPage6.TabIndex = 5;
+            this.tabPage6.Text = "tabPage6";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // Dampers
+            // 
+            this.Dampers.Controls.Add(this.DamperRB_OP);
+            this.Dampers.Controls.Add(this.DamperLB_OP);
+            this.Dampers.Controls.Add(this.DamperRF_OP);
+            this.Dampers.Controls.Add(this.DamperLF_OP);
+            this.Dampers.Location = new System.Drawing.Point(4, 25);
+            this.Dampers.Name = "Dampers";
+            this.Dampers.Size = new System.Drawing.Size(1200, 597);
+            this.Dampers.TabIndex = 4;
+            this.Dampers.Text = "Dampers";
+            this.Dampers.UseVisualStyleBackColor = true;
+            // 
+            // DamperRB_OP
+            // 
+            this.DamperRB_OP.Location = new System.Drawing.Point(0, 448);
+            this.DamperRB_OP.Name = "DamperRB_OP";
+            this.DamperRB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.DamperRB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.DamperRB_OP.TabIndex = 19;
+            this.DamperRB_OP.Text = "plotView5";
+            this.DamperRB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.DamperRB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.DamperRB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // DamperLB_OP
+            // 
+            this.DamperLB_OP.Location = new System.Drawing.Point(0, 298);
+            this.DamperLB_OP.Name = "DamperLB_OP";
+            this.DamperLB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.DamperLB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.DamperLB_OP.TabIndex = 18;
+            this.DamperLB_OP.Text = "plotView4";
+            this.DamperLB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.DamperLB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.DamperLB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // DamperRF_OP
+            // 
+            this.DamperRF_OP.Location = new System.Drawing.Point(0, 148);
+            this.DamperRF_OP.Name = "DamperRF_OP";
+            this.DamperRF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.DamperRF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.DamperRF_OP.TabIndex = 17;
+            this.DamperRF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.DamperRF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.DamperRF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // DamperLF_OP
+            // 
+            this.DamperLF_OP.Location = new System.Drawing.Point(0, -2);
+            this.DamperLF_OP.Name = "DamperLF_OP";
+            this.DamperLF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.DamperLF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.DamperLF_OP.TabIndex = 16;
+            this.DamperLF_OP.Text = "plotView2";
+            this.DamperLF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.DamperLF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.DamperLF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // Suspension
+            // 
+            this.Suspension.Controls.Add(this.SuspensionRB_OP);
+            this.Suspension.Controls.Add(this.SuspensionLB_OP);
+            this.Suspension.Controls.Add(this.SuspensionRF_OP);
+            this.Suspension.Controls.Add(this.SuspensionLF_OP);
+            this.Suspension.Location = new System.Drawing.Point(4, 25);
+            this.Suspension.Name = "Suspension";
+            this.Suspension.Size = new System.Drawing.Size(1200, 597);
+            this.Suspension.TabIndex = 3;
+            this.Suspension.Text = "Suspension";
+            this.Suspension.UseVisualStyleBackColor = true;
+            // 
+            // SuspensionRB_OP
+            // 
+            this.SuspensionRB_OP.Location = new System.Drawing.Point(0, 448);
+            this.SuspensionRB_OP.Name = "SuspensionRB_OP";
+            this.SuspensionRB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.SuspensionRB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.SuspensionRB_OP.TabIndex = 15;
+            this.SuspensionRB_OP.Text = "plotView5";
+            this.SuspensionRB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.SuspensionRB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.SuspensionRB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // SuspensionLB_OP
+            // 
+            this.SuspensionLB_OP.Location = new System.Drawing.Point(0, 298);
+            this.SuspensionLB_OP.Name = "SuspensionLB_OP";
+            this.SuspensionLB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.SuspensionLB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.SuspensionLB_OP.TabIndex = 14;
+            this.SuspensionLB_OP.Text = "plotView4";
+            this.SuspensionLB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.SuspensionLB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.SuspensionLB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // SuspensionRF_OP
+            // 
+            this.SuspensionRF_OP.Location = new System.Drawing.Point(0, 148);
+            this.SuspensionRF_OP.Name = "SuspensionRF_OP";
+            this.SuspensionRF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.SuspensionRF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.SuspensionRF_OP.TabIndex = 13;
+            this.SuspensionRF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.SuspensionRF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.SuspensionRF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // SuspensionLF_OP
+            // 
+            this.SuspensionLF_OP.Location = new System.Drawing.Point(0, -2);
+            this.SuspensionLF_OP.Name = "SuspensionLF_OP";
+            this.SuspensionLF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.SuspensionLF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.SuspensionLF_OP.TabIndex = 12;
+            this.SuspensionLF_OP.Text = "plotView2";
+            this.SuspensionLF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.SuspensionLF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.SuspensionLF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyreTemp
+            // 
+            this.TyreTemp.Controls.Add(this.TyreTempsRB_OP);
+            this.TyreTemp.Controls.Add(this.TyreTempsLB_OP);
+            this.TyreTemp.Controls.Add(this.TyreTempsRF_OP);
+            this.TyreTemp.Controls.Add(this.TyreTempsLF_OP);
+            this.TyreTemp.Location = new System.Drawing.Point(4, 25);
+            this.TyreTemp.Margin = new System.Windows.Forms.Padding(2);
+            this.TyreTemp.Name = "TyreTemp";
+            this.TyreTemp.Size = new System.Drawing.Size(1200, 597);
+            this.TyreTemp.TabIndex = 2;
+            this.TyreTemp.Text = "Tyres Temps";
+            this.TyreTemp.UseVisualStyleBackColor = true;
+            // 
+            // TyreTempsRB_OP
+            // 
+            this.TyreTempsRB_OP.Location = new System.Drawing.Point(0, 450);
+            this.TyreTempsRB_OP.Name = "TyreTempsRB_OP";
+            this.TyreTempsRB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyreTempsRB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyreTempsRB_OP.TabIndex = 11;
+            this.TyreTempsRB_OP.Text = "plotView5";
+            this.TyreTempsRB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyreTempsRB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyreTempsRB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyreTempsLB_OP
+            // 
+            this.TyreTempsLB_OP.Location = new System.Drawing.Point(0, 300);
+            this.TyreTempsLB_OP.Name = "TyreTempsLB_OP";
+            this.TyreTempsLB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyreTempsLB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyreTempsLB_OP.TabIndex = 10;
+            this.TyreTempsLB_OP.Text = "plotView4";
+            this.TyreTempsLB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyreTempsLB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyreTempsLB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyreTempsRF_OP
+            // 
+            this.TyreTempsRF_OP.Location = new System.Drawing.Point(0, 150);
+            this.TyreTempsRF_OP.Name = "TyreTempsRF_OP";
+            this.TyreTempsRF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyreTempsRF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyreTempsRF_OP.TabIndex = 9;
+            this.TyreTempsRF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyreTempsRF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyreTempsRF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyreTempsLF_OP
+            // 
+            this.TyreTempsLF_OP.Location = new System.Drawing.Point(0, 0);
+            this.TyreTempsLF_OP.Name = "TyreTempsLF_OP";
+            this.TyreTempsLF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyreTempsLF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyreTempsLF_OP.TabIndex = 8;
+            this.TyreTempsLF_OP.Text = "plotView2";
+            this.TyreTempsLF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyreTempsLF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyreTempsLF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyrePressure
+            // 
+            this.TyrePressure.Controls.Add(this.TyrePressureRB_OP);
+            this.TyrePressure.Controls.Add(this.TyrePressureLB_OP);
+            this.TyrePressure.Controls.Add(this.TyrePressureRF_OP);
+            this.TyrePressure.Controls.Add(this.TyrePressureLF_OP);
+            this.TyrePressure.Location = new System.Drawing.Point(4, 25);
+            this.TyrePressure.Name = "TyrePressure";
+            this.TyrePressure.Padding = new System.Windows.Forms.Padding(3);
+            this.TyrePressure.Size = new System.Drawing.Size(1200, 597);
+            this.TyrePressure.TabIndex = 1;
+            this.TyrePressure.Text = "Tyres Pressure";
+            this.TyrePressure.UseVisualStyleBackColor = true;
+            // 
+            // TyrePressureRB_OP
+            // 
+            this.TyrePressureRB_OP.Location = new System.Drawing.Point(0, 450);
+            this.TyrePressureRB_OP.Name = "TyrePressureRB_OP";
+            this.TyrePressureRB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyrePressureRB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyrePressureRB_OP.TabIndex = 7;
+            this.TyrePressureRB_OP.Text = "plotView5";
+            this.TyrePressureRB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyrePressureRB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyrePressureRB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyrePressureLB_OP
+            // 
+            this.TyrePressureLB_OP.Location = new System.Drawing.Point(0, 300);
+            this.TyrePressureLB_OP.Name = "TyrePressureLB_OP";
+            this.TyrePressureLB_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyrePressureLB_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyrePressureLB_OP.TabIndex = 6;
+            this.TyrePressureLB_OP.Text = "plotView4";
+            this.TyrePressureLB_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyrePressureLB_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyrePressureLB_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyrePressureRF_OP
+            // 
+            this.TyrePressureRF_OP.Location = new System.Drawing.Point(0, 150);
+            this.TyrePressureRF_OP.Name = "TyrePressureRF_OP";
+            this.TyrePressureRF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyrePressureRF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyrePressureRF_OP.TabIndex = 5;
+            this.TyrePressureRF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyrePressureRF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyrePressureRF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TyrePressureLF_OP
+            // 
+            this.TyrePressureLF_OP.Location = new System.Drawing.Point(0, 0);
+            this.TyrePressureLF_OP.Name = "TyrePressureLF_OP";
+            this.TyrePressureLF_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TyrePressureLF_OP.Size = new System.Drawing.Size(1200, 150);
+            this.TyrePressureLF_OP.TabIndex = 4;
+            this.TyrePressureLF_OP.Text = "plotView2";
+            this.TyrePressureLF_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TyrePressureLF_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TyrePressureLF_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // Main
+            // 
+            this.Main.Controls.Add(this.Engine_Plot);
+            this.Main.Controls.Add(this.GForces_Plot);
+            this.Main.Controls.Add(this.Speed_Plot);
+            this.Main.Controls.Add(this.TimeDiff_Plot);
+            this.Main.Location = new System.Drawing.Point(4, 25);
+            this.Main.Name = "Main";
+            this.Main.Padding = new System.Windows.Forms.Padding(3);
+            this.Main.Size = new System.Drawing.Size(1200, 597);
+            this.Main.TabIndex = 0;
+            this.Main.Text = "MainPage";
+            this.Main.UseVisualStyleBackColor = true;
+            // 
+            // Engine_Plot
+            // 
+            this.Engine_Plot.Location = new System.Drawing.Point(0, 450);
+            this.Engine_Plot.Name = "Engine_Plot";
+            this.Engine_Plot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.Engine_Plot.Size = new System.Drawing.Size(1200, 150);
+            this.Engine_Plot.TabIndex = 3;
+            this.Engine_Plot.Text = "G_Froce";
+            this.Engine_Plot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.Engine_Plot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.Engine_Plot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // GForces_Plot
+            // 
+            this.GForces_Plot.Location = new System.Drawing.Point(0, 300);
+            this.GForces_Plot.Name = "GForces_Plot";
+            this.GForces_Plot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.GForces_Plot.Size = new System.Drawing.Size(1200, 150);
+            this.GForces_Plot.TabIndex = 2;
+            this.GForces_Plot.Text = "G_Froce";
+            this.GForces_Plot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.GForces_Plot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.GForces_Plot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // Speed_Plot
+            // 
+            this.Speed_Plot.Location = new System.Drawing.Point(0, 150);
+            this.Speed_Plot.Name = "Speed_Plot";
+            this.Speed_Plot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.Speed_Plot.Size = new System.Drawing.Size(1200, 150);
+            this.Speed_Plot.TabIndex = 1;
+            this.Speed_Plot.Text = "Speed";
+            this.Speed_Plot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.Speed_Plot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.Speed_Plot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // TimeDiff_Plot
+            // 
+            this.TimeDiff_Plot.Location = new System.Drawing.Point(0, 0);
+            this.TimeDiff_Plot.Name = "TimeDiff_Plot";
+            this.TimeDiff_Plot.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TimeDiff_Plot.Size = new System.Drawing.Size(1200, 150);
+            this.TimeDiff_Plot.TabIndex = 0;
+            this.TimeDiff_Plot.Text = "Time_Diff_PV";
+            this.TimeDiff_Plot.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TimeDiff_Plot.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TimeDiff_Plot.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(1213, 48);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(300, 300);
+            this.dataGridView1.TabIndex = 5;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Main);
+            this.tabControl1.Controls.Add(this.TyrePressure);
+            this.tabControl1.Controls.Add(this.TyreTemp);
+            this.tabControl1.Controls.Add(this.Suspension);
+            this.tabControl1.Controls.Add(this.Dampers);
+            this.tabControl1.Controls.Add(this.tabPage6);
+            this.tabControl1.Controls.Add(this.tabPage7);
+            this.tabControl1.Controls.Add(this.tabPage8);
+            this.tabControl1.Controls.Add(this.tabPage9);
+            this.tabControl1.Controls.Add(this.tabPage10);
+            this.tabControl1.Controls.Add(this.tabPage11);
+            this.tabControl1.Location = new System.Drawing.Point(0, 26);
+            this.tabControl1.MaximumSize = new System.Drawing.Size(1536, 864);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1208, 626);
+            this.tabControl1.TabIndex = 2;
+            // 
+            // TrackLeght_OP
+            // 
+            this.TrackLeght_OP.Location = new System.Drawing.Point(4, 650);
+            this.TrackLeght_OP.Name = "TrackLeght_OP";
+            this.TrackLeght_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.TrackLeght_OP.Size = new System.Drawing.Size(1210, 100);
+            this.TrackLeght_OP.TabIndex = 6;
+            this.TrackLeght_OP.Text = "plotView1";
+            this.TrackLeght_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.TrackLeght_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.TrackLeght_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            this.TrackLeght_OP.MouseClick += new System.Windows.Forms.MouseEventHandler(this.TrackLeght_OP_Zoom_Changed);
+            this.TrackLeght_OP.MouseWheel += new System.Windows.Forms.MouseEventHandler(this.TrackLeght_OP_Zoom_Changed);
+            // 
+            // RaceTrack_OP
+            // 
+            this.RaceTrack_OP.Location = new System.Drawing.Point(1215, 450);
+            this.RaceTrack_OP.Name = "RaceTrack_OP";
+            this.RaceTrack_OP.PanCursor = System.Windows.Forms.Cursors.Hand;
+            this.RaceTrack_OP.Size = new System.Drawing.Size(300, 300);
+            this.RaceTrack_OP.TabIndex = 7;
+            this.RaceTrack_OP.Text = "plotView6";
+            this.RaceTrack_OP.ZoomHorizontalCursor = System.Windows.Forms.Cursors.SizeWE;
+            this.RaceTrack_OP.ZoomRectangleCursor = System.Windows.Forms.Cursors.SizeNWSE;
+            this.RaceTrack_OP.ZoomVerticalCursor = System.Windows.Forms.Cursors.SizeNS;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(1214, 362);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -711,7 +773,11 @@ namespace RBR_NGP_TelemetryViewer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(1232, 653);
+            this.ClientSize = new System.Drawing.Size(1519, 753);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TrackLeght_OP);
+            this.Controls.Add(this.RaceTrack_OP);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -720,91 +786,86 @@ namespace RBR_NGP_TelemetryViewer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "RBR NGP Telemetry Viewer";
             this.Load += new System.EventHandler(this.Form1_Load);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
-            this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage10.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabPage11.ResumeLayout(false);
+            this.Dampers.ResumeLayout(false);
+            this.Suspension.ResumeLayout(false);
+            this.TyreTemp.ResumeLayout(false);
+            this.TyrePressure.ResumeLayout(false);
+            this.Main.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem firstMenuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openFileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem1;
-        private ScottPlot.FormsPlot RaceTrack;
-        private ScottPlot.FormsPlot EngineDataChart;
-        private ScottPlot.FormsPlot GForcesChart;
-        private ScottPlot.FormsPlot SpeedChart;
-        public ScottPlot.FormsPlot TimeDiffirenceChart;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.TabPage tabPage3;
-        private ScottPlot.FormsPlot TyreTempLBPlotH;
-        private ScottPlot.FormsPlot TyreTempRFPlotH;
-        private ScottPlot.FormsPlot TyreTempLFPlotH;
-        private ScottPlot.FormsPlot TyreTempRBPlotH;
-        private ScottPlot.FormsPlot TyrePressureRBPlotH;
-        private ScottPlot.FormsPlot TyrePressureLBPlotH;
-        private ScottPlot.FormsPlot TyrePressureRFPlotH;
-        private ScottPlot.FormsPlot TyrePressureLFPlotH;
-        private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.TabPage tabPage5;
-        private ScottPlot.FormsPlot SuspensionRBPlot;
-        private ScottPlot.FormsPlot SuspensionLBPlot;
-        private ScottPlot.FormsPlot SuspensionRFPlot;
-        private ScottPlot.FormsPlot SuspensionLFPlot;
-        private System.Windows.Forms.TabPage tabPage6;
-        private ScottPlot.FormsPlot BrakeTempRBPlot;
-        private ScottPlot.FormsPlot BrakeTempLBPlot;
-        private ScottPlot.FormsPlot BrakeTempRFPlot;
-        private ScottPlot.FormsPlot BrakeTempLFPlot;
-        private System.Windows.Forms.TabPage tabPage7;
-        private ScottPlot.FormsPlot TyrePressureRBPlot;
-        private ScottPlot.FormsPlot TyrePressureLBPlot;
-        private ScottPlot.FormsPlot TyrePressureRFPlot;
-        private ScottPlot.FormsPlot TyrePressureLFPlot;
-        private System.Windows.Forms.TabPage tabPage8;
-        private ScottPlot.FormsPlot TyreTempsRBPlot;
-        private ScottPlot.FormsPlot TyreTempsLBPlot;
-        private ScottPlot.FormsPlot TyreTempsRFPlot;
-        private ScottPlot.FormsPlot TyreTempsLFPlot;
-        private System.Windows.Forms.TabPage tabPage9;
-        private ScottPlot.FormsPlot HelperSpringPlot;
-        private ScottPlot.FormsPlot EngineTempsPlot;
-        private ScottPlot.FormsPlot WheelSpeedPlot;
-        private ScottPlot.FormsPlot GearPlot;
-        private System.Windows.Forms.TabPage tabPage10;
-        private ScottPlot.FormsPlot WheelWearsRBPlot;
-        private ScottPlot.FormsPlot WheelWearsLBPlot;
-        private ScottPlot.FormsPlot WheelWearsRFPlot;
-        private ScottPlot.FormsPlot WheelWearsLFPlot;
-        private ScottPlot.FormsPlot SuspensionRBPlotH;
-        private ScottPlot.FormsPlot SuspensionLBPlotH;
-        private ScottPlot.FormsPlot SuspensionRFPlotH;
-        private ScottPlot.FormsPlot SuspensionLFPlotH;
+        private System.Windows.Forms.ToolStripMenuItem wTFToolStripMenuItem;
         private System.Windows.Forms.TabPage tabPage11;
-        private ScottPlot.FormsPlot SuspensionForcesRBPlot;
-        private ScottPlot.FormsPlot SuspensionForcesLBPlot;
-        private ScottPlot.FormsPlot SuspensionForcesRFPlot;
-        private ScottPlot.FormsPlot SuspensionForcesLFPlot;
+        private System.Windows.Forms.TabPage tabPage10;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.TabPage tabPage8;
+        private System.Windows.Forms.TabPage tabPage7;
+        private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.TabPage Dampers;
+        private System.Windows.Forms.TabPage Suspension;
+        private System.Windows.Forms.TabPage TyreTemp;
+        private System.Windows.Forms.TabPage TyrePressure;
+        private System.Windows.Forms.TabPage Main;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private OxyPlot.WindowsForms.PlotView TrackLeght_OP;
+        private OxyPlot.WindowsForms.PlotView TimeDiff_Plot;
+        private OxyPlot.WindowsForms.PlotView RaceTrack_OP;
+        private OxyPlot.WindowsForms.PlotView TyrePressureRB_OP;
+        private OxyPlot.WindowsForms.PlotView TyrePressureLB_OP;
+        private OxyPlot.WindowsForms.PlotView TyrePressureRF_OP;
+        private OxyPlot.WindowsForms.PlotView TyrePressureLF_OP;
+        private OxyPlot.WindowsForms.PlotView TyreTempsRB_OP;
+        private OxyPlot.WindowsForms.PlotView TyreTempsLB_OP;
+        private OxyPlot.WindowsForms.PlotView TyreTempsRF_OP;
+        private OxyPlot.WindowsForms.PlotView TyreTempsLF_OP;
+        private System.Windows.Forms.ToolStripMenuItem workspaceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tyrePressureToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem loadToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lineToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tyreTempToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem lineToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem histogramToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem addWorkspaceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem suspensionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Suspension_Lines_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Suspension_Histogram_Menu;
+        private OxyPlot.WindowsForms.PlotView SuspensionRB_OP;
+        private OxyPlot.WindowsForms.PlotView SuspensionLB_OP;
+        private OxyPlot.WindowsForms.PlotView SuspensionRF_OP;
+        private OxyPlot.WindowsForms.PlotView SuspensionLF_OP;
+        private OxyPlot.WindowsForms.PlotView DamperRB_OP;
+        private OxyPlot.WindowsForms.PlotView DamperLB_OP;
+        private OxyPlot.WindowsForms.PlotView DamperRF_OP;
+        private OxyPlot.WindowsForms.PlotView DamperLF_OP;
+        private System.Windows.Forms.ToolStripMenuItem dampersToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Dampers_Lines_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Dampers_Histogram_Menu;
+        private System.Windows.Forms.ToolStripMenuItem Show_WheelSpeed_Menu;
+        private System.Windows.Forms.ToolStripMenuItem addWorkspaceToolStripMenuItem1;
+        private OxyPlot.WindowsForms.PlotView GForces_Plot;
+        private OxyPlot.WindowsForms.PlotView Speed_Plot;
+        private OxyPlot.WindowsForms.PlotView Engine_Plot;
+        private System.Windows.Forms.ToolStripTextBox Front_Bump_Treshold;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripTextBox Rear_Bump_Treshold;
+        private System.Windows.Forms.Label label1;
     }
 }
 

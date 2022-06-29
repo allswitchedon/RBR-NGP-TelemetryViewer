@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RBR_NGP_TelemetryViewer
 {
@@ -11,41 +13,50 @@ namespace RBR_NGP_TelemetryViewer
     {
         public class Parse
         {
-
             static List<string> columnsname = new List<string>();
             static List<List<double>> telemetrydata = new List<List<double>>();
-            public static void test(string selectfile)
+            public static bool test(string selectfile)
             {
-                string rowfile;
-                double value;
 
-                StreamReader filestream = new StreamReader(selectfile, false);
-                //Reading Data
-                while (filestream.Peek() != -1)
+                string rowfile;
+                bool isbusy;
+                try
                 {
-                    rowfile = filestream.ReadLine();
-                    string[] rowdata = rowfile.Split('\t');
-                    if (columnsname.Count == 0)
+                    using (StreamReader filestream = new StreamReader(selectfile))
                     {
-                        columnsname.AddRange(rowfile.Split('\t'));
-                        foreach (string column in columnsname)
+                        //StreamReader filestream = new StreamReader(selectfile, false);
+                        //Reading Data
+
+                        while (filestream.Peek() != -1)
                         {
-                            List<double> data = new List<double>();
-                            telemetrydata.Add(data);
+                            rowfile = filestream.ReadLine();
+                            string[] rowdata = rowfile.Split('\t');
+                            if (columnsname.Count == 0)
+                            {
+                                columnsname.AddRange(rowfile.Split('\t'));
+                                telemetrydata.AddRange(from string column in columnsname
+                                                       let data = new List<double>()
+                                                       select data);
+                            }
+                            else
+                            {
+                                for (int i = 0; i < rowdata.Length; i++)
+                                {
+                                    Double.TryParse(rowdata[i], out double value);
+                                    telemetrydata[i].Add(value);
+                                }
+
+                            }
                         }
                     }
-                    else
-                    {
-                        for (int i = 0; i < rowdata.Length; i++)
-                        {
-                            Double.TryParse(rowdata[i], out value);
-                            telemetrydata[i].Add(value);
-                            //telemetrydata[i].Add(Convert.ToDouble(rowdata[i]));
-                        }
-                    }
+                    return isbusy = false;
                 }
-                filestream.Dispose();
-                filestream.Close();
+                catch (Exception ex)
+                {
+                    return isbusy = true;
+                }
+                //filestream.Dispose();
+                //filestream.Close();
             }
 
             public static List<string> test1()
@@ -54,6 +65,7 @@ namespace RBR_NGP_TelemetryViewer
             }
             public static  List<List<double>> test2()
             {
+                
                 var first5 = telemetrydata[0].IndexOf(5);
                 var last5 = telemetrydata[0].LastIndexOf(5);
                 if (first5 != last5)
@@ -61,17 +73,10 @@ namespace RBR_NGP_TelemetryViewer
                     for (int i = 0; i < columnsname.Count; i++)
                     {
                         telemetrydata[i].RemoveRange(0, last5);
-                    } 
+                    }
                 }
                 return telemetrydata;
-            }
-
-            public static void removetest(int column, int index)
-            {
-                if (index < 12500)
-                {
-                    telemetrydata[column-1].RemoveRange(0, 12400);
-                }
+                
             }
 
             public static void ClearData()
